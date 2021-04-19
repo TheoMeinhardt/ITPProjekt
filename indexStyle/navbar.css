@@ -1,0 +1,12 @@
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.navbar > div {
+  margin: 0vw 0.8vw 0vw 0.8vw;
+}
+
+.navbarGap {
+  flex-grow: 999;
+}
