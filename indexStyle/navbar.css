@@ -1,6 +1,7 @@
 .navbar {
   display: flex;
   flex-flow: row nowrap;
+  font-family: "Roboto Mono", monospace;
 }
 
 .navbar > div {
