@@ -1,5 +1,15 @@
 /* Fonts: */
 
+HTML Header:
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet"> 
+
+CSS rules:
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;
+
+Roboto Mono -> Überschriften
+Roboto -> Text
 
 /* Colors: */
 
