@@ -1,4 +1,6 @@
+************
 /* Fonts: */
+************
 
 HTML Header:
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -11,7 +13,9 @@ font-family: 'Roboto Mono', monospace;
 Roboto Mono -> Überschriften
 Roboto -> Text
 
+*************
 /* Colors: */
+*************
 
 https://paletton.com/#uid=23L0u0klHAMbDQZhdIRq5vyulqC
 
