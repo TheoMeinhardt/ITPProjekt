@@ -19,10 +19,12 @@ Roboto -> Text
 
 https://paletton.com/#uid=23L0u0klHAMbDQZhdIRq5vyulqC
 
+#333333 -> Font color
+
 /* Main Primary color */
 
 .color-primary-0 { color: #496BBA }
-.color-primary-1 { color: #9AB1E5 }
+.color-primary-1 { color: #9AB1E5 } -> Background color
 .color-primary-2 { color: #6B8ACF }
 .color-primary-3 { color: #2D53A8 }
 .color-primary-4 { color: #153A8E }
