@@ -4,7 +4,11 @@
 
 body{
     margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: hsl(222, 59%, 75%);
+    color: hsl(0, 0%, 20%);
 }
+
 h1{
     font-family: Roboto Mono;
 }
@@ -71,7 +75,7 @@ p{
 .board.x .cell:not(.x):not(.c):hover::before,
 .board.x .cell:not(.x):not(.c):hover::after,
 .board.c .cell:not(.x):not(.c):hover::before{
-    background-color: lightgray;
+    background-color: lightgray
 }
 
 
@@ -112,7 +116,7 @@ p{
 .board.c .cell:not(.x):not(.c):hover::after{
     width: calc(var(--mark-size)* 0.7);
     height: calc(var(--mark-size)* 0.7);
-    background-color: white;
+    background-color: hsl(222, 59%, 75%);
 }
 
 .winning-meesage{
