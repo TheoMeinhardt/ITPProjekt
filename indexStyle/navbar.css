@@ -1,10 +1,11 @@
 .navbar {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
 
   font-family: "Roboto Mono", monospace;
   font-weight: bold;
-  font-size: 1vw;
+  font-size: 2vh;
 
   background-color: hsl(221, 51%, 62%);
 
@@ -12,12 +13,17 @@
 }
 
 .navbarItem {
-  margin: 0vw 0.8vw 0vw 0.8vw;
+  margin: 0vw 0.8vw 0vw 0.2vw;
   border-bottom: 2px hsl(221, 51%, 62%) solid;
 }
 
 .navbarItem:hover {
   border-bottom: 2px hsl(0, 0%, 20%) solid;
+}
+
+.navbarIcon {
+  height: 3vh;
+  margin-left: 0.6vw;
 }
 
 .navbarGap {

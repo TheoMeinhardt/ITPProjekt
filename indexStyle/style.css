@@ -1,10 +1,25 @@
+html,
 body {
   font-family: "Roboto", sans-serif;
   background-color: hsl(222, 59%, 75%);
   color: hsl(0, 0%, 20%);
+
+  height: 100%;
   margin: 0px;
   padding: 0px;
 }
+
+.content {
+  min-height: 100%;
+  margin-bottom: -7vw;
+}
+
+.link {
+  color: hsl(0, 0%, 20%);
+  text-decoration: none;
+}
+
+/* Badges: */
 
 .gameBadgeList {
   display: flex;
@@ -16,8 +31,6 @@ body {
   margin: 2vh 1vw 0px 1vw;
   padding: 1.5vh 0.7vw 1vh 0.7vw;
 
-  background-color: hsl(40, 96%, 58%);
-  border: 1px solid hsl(40, 96%, 58%);
   border-radius: 1vw;
 
   text-align: center;
@@ -25,4 +38,24 @@ body {
 
 .badgeImage {
   width: 200px;
+  border-radius: 1vw;
+}
+
+/* Footer: */
+
+.footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  height: 7vw;
+
+  background-color: hsl(221, 58%, 42%);
+  color: hsl(0, 0%, 70%);
+}
+
+.footerItem {
+  width: 33vw;
 }
