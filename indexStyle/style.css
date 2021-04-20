@@ -5,3 +5,24 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
+.gameBadgeList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.badge {
+  margin: 2vh 1vw 0px 1vw;
+  padding: 1.5vh 0.7vw 1vh 0.7vw;
+
+  background-color: hsl(40, 96%, 58%);
+  border: 1px solid hsl(40, 96%, 58%);
+  border-radius: 1vw;
+
+  text-align: center;
+}
+
+.badgeImage {
+  width: 200px;
+}
