@@ -1,60 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TicTacToe</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="../indexStyle/navbar.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>TicTacToe</title>
 </head>
-
-<!-- 
-    1.) HTML Strultur
-        1.1) Board
-        1.2) Zellen
-        1.3) Winning Message 
-
-    2.) Styling
-        2.1) Board
-        2.2) Zellen
-
-    3.) JavaScript
-        3.1) ...
--->
-
 <body>
-
+    
     <nav>
-      <div class="navbar">
-        <div class="navbarItem">Home</div>
-        <div class="navbarGap"></div>
-        <div class="navbarItem">Chess</div>
-        <div class="navbarItem">Memory</div>
-        <div class="navbarItem">Pong</div>
-        <div class="navbarItem">Snake</div>
-        <div class="navbarItem">TicTacToe</div>
-      </div>
+        <div class="navbar">
+          <div class="navbarItem">Home</div>
+          <div class="navbarGap"></div>
+          <div class="navbarItem">Chess</div>
+          <div class="navbarItem">Memory</div>
+          <div class="navbarItem">Pong</div>
+          <div class="navbarItem">Snake</div>
+          <div class="navbarItem">TicTacToe</div>
+        </div>
     </nav>
 
+    <h1>TicTacToe</h1>
+    
     <div class="board" id="board">
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-    </div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+  </div>
 
-    <div class="winning-message" id="winningMessage">
-        <div data-winning-message-text></div>
-        <button id="restartButton">Restart</button>
-    </div>
+  <div class="winning-message" id="winningMessage">
+    <div data-winning-message-text></div>
+    <button id="restartButton">Restart</button>
+  </div>
+
 </body>
 </html>
