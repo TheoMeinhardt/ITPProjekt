@@ -10,6 +10,8 @@
   body {
     margin: 0;
     background-color: #9AB1E5;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   h1{
@@ -19,7 +21,11 @@
     font-family: 'Roboto Mono', monospace;
   }
 
+  p{
+  font-family: 'Roboto', sans-serif;
+  }
   .board {
+    margin-top: -150px;
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -134,6 +140,7 @@
     color: white;
     font-size: 5rem;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
   }
   
   .winning-message button {
@@ -142,6 +149,7 @@
     border: 1px solid black;
     padding: .25em .5em;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
   }
   
   .winning-message button:hover {
