@@ -68,3 +68,22 @@ body {
 .footerItem > a:hover {
   border-bottom: 2px hsl(0, 0%, 70%) solid;
 }
+
+/* custom scrollbar: */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsla(0, 0%, 0%, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(222, 74%, 32%);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(242, 74%, 32%);
+}
