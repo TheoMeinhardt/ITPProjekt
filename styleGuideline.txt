@@ -13,6 +13,17 @@ font-family: 'Roboto Mono', monospace;
 Roboto Mono -> Überschriften
 Roboto -> Text
 
+--> Nicht scrollen <--
+
+    -x: hidden; -Leiste auf der X-Achse
+    -y: hidden; -Leiste auf der Y-Achse
+    ...Scrollbars werden auch ausgeblendet...
+
+--> Nicht scrollen <--
+
+Lila link (visited) entfernen:
+a:visited { text-decoration: none; color:black; }
+
 *************
 /* Colors: */
 *************
