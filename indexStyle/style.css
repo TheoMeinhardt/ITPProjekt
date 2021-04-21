@@ -51,11 +51,20 @@ body {
   text-align: center;
 
   height: 7vw;
+  font-size: 2.5vh;
 
   background-color: hsl(221, 58%, 42%);
-  color: hsl(0, 0%, 70%);
 }
 
 .footerItem {
   width: 33vw;
+}
+
+.footerLink {
+  color: hsl(0, 0%, 70%);
+  text-decoration: none;
+}
+
+.footerItem > a:hover {
+  border-bottom: 2px hsl(0, 0%, 70%) solid;
 }
