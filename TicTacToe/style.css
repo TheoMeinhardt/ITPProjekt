@@ -25,7 +25,7 @@
   font-family: 'Roboto', sans-serif;
   }
   .board {
-    margin-top: -150px;
+    margin-top: -15vh;
     width: 100vw;
     height: 100vh;
     display: grid;
