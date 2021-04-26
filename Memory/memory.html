@@ -1,69 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="scripts.js"></script>
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+    <link rel="stylesheet" href="memory.css">
+    <link rel="stylesheet" href="../indexStyle/navbar.css">
+    <link rel="stylesheet" href="../indexStyle/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="memory-game">
-        <div class="memory-card" data-framework="aurelia">
-          <img class="front-face" src="img/aurelia.svg" alt="Aurelia" />
-          <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
+  <nav>
+    <div class="navbar">
+      <div><img class="navbarIcon" src="../images/home_black_24dp.svg" /></div>
+      <a href="../index.html">
+        <div class="navbarItem">Home</div>
+      </a>
+
+      <div class="navbarGap"></div>
+      <a href="../abChess/...">
+        <div class="navbarItem">Chess</div>
+      </a>
+
+       <a href="../Memory/memory.html">
+        <div class="navbarItem">Memory</div>
+      </a>
+
+      <a href="../Pong/pong.html">
+        <div class="navbarItem">Pong</div>
+      </a>
+
+      <a href="../Snake/snake.html">
+        <div class="navbarItem">Snake</div>
+      </a>
+
+      <a href="../TicTacToe/tictactoe.html">
+        <div class="navbarItem">TicTacToe</div>
+      </a>
+    </div>
+</nav>
+    <div class="container">
+        <header>
+            <h1>Memory Game</h1>
+        </header>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="moves">0</span> Move(s)
+
+            <div class="timer">
+            </div>
+
+            <div class="restart" onclick=startGame()>
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+        <ul class="deck" id="card-deck">
+            <li class="card" type="diamond">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card" type="plane">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card match" type="anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="bolt" >
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
+            </li>
+            <li class="card match" type="anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card" type="diamond">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card open show" type="bolt">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card" type="plane">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
+            </li>
+        </ul>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Congratulations 🎉</h2>
+                <a class="close" href=# >×</a>
+                <div class="content-1">
+                    Congratulations you're a winner 🎉🎉
+                </div>
+                <div class="content-2">
+                    <p>You made <span id=finalMove> </span> moves </p>
+                    <p>in <span id=totalTime> </span> </p>
+                    <p>Rating:  <span id=starRating></span></p>
+                </div>
+                <button id="play-again"onclick="playAgain()">
+                    Play again 😄</a>
+                </button>
+            </div>
         </div>
-        <div class="memory-card" data-framework="aurelia">
-          <img class="front-face" src="img/aurelia.svg" alt="Aurelia" />
-          <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-        </div>
-    
-        <div class="memory-card" data-framework="vue">
-          <img class="front-face" src="img/vue.svg" alt="Vue" />
-          <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-        </div>
-        <div class="memory-card" data-framework="vue">
-          <img class="front-face" src="img/vue.svg" alt="Vue" />
-          <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-        </div>
-    
-        <div class="memory-card" data-framework="angular">
-          <img class="front-face" src="img/angular.svg" alt="Angular" />
-          <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-        </div>
-        <div class="memory-card" data-framework="angular">
-          <img class="front-face" src="img/angular.svg" alt="Angular" />
-          <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-        </div>
-    
-        <div class="memory-card" data-framework="ember">
-          <img class="front-face" src="img/ember.svg" alt="Ember" />
-          <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-        </div>
-        <div class="memory-card" data-framework="ember">
-          <img class="front-face" src="img/ember.svg" alt="Ember" />
-          <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-        </div>
-    
-        <div class="memory-card" data-framework="backbone">
-          <img class="front-face" src="img/backbone.svg" alt="Backbone" />
-          <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-        </div>
-        <div class="memory-card" data-framework="backbone">
-          <img class="front-face" src="img/backbone.svg" alt="Backbone" />
-          <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-        </div>
-    
-        <div class="memory-card" data-framework="react">
-          <img class="front-face" src="img/react.svg" alt="React" />
-          <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-        </div>
-        <div class="memory-card" data-framework="react">
-          <img class="front-face" src="img/react.svg" alt="React" />
-          <img class="back-face" src="img/js-badge.svg" alt="JS Badge" />
-        </div>
-      </section>
-    
-      
+
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
