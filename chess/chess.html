@@ -6,10 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS: -->
     <link rel="stylesheet" href="./style/chess.css" />
+    <link rel="stylesheet" href="../indexStyle/navbar.css" />
 
     <title>FiveGames</title>
   </head>
   <body>
+    <!-- Navbar: -->
+    <nav>
+      <div class="navbar">
+        <div>
+          <img class="navbarIcon" src="../images/home_black_24dp.svg" />
+        </div>
+        <div class="navbarItem">
+          <a class="link" href="../index.html">Home</a>
+        </div>
+        <div class="navbarGap"></div>
+        <div class="navbarItem">
+          <a class="link" href="./chess.html">Chess</a>
+        </div>
+        <div class="navbarItem">
+          <a class="link" href="./Memory/memory.html">Memory</a>
+        </div>
+        <div class="navbarItem">
+          <a class="link" href="./Pong/pong.html">Pong</a>
+        </div>
+        <div class="navbarItem"><a class="link" href="#">Snake</a></div>
+        <div class="navbarItem">
+          <a class="link" href="./TicTacToe/tictactoe.html">TicTacToe</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="board" id="board"></div>
+    </div>
+
     <script src="./script/chess.js"></script>
   </body>
 </html>
