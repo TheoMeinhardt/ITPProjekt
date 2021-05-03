@@ -56,19 +56,14 @@ function endGame(draw) {
   if (draw) {
     winningMessageTextElement.innerText = 'Draw!'
   } 
-  if(CTurn == true){
-    cpoints += 1
-    cPoints.innerText = cpoints
-    winningMessageTextElement.innerText = "O's Wins"
-  }
-  if(CTurn == false){
-    xpoints += 1
-    xPoints.innerHTML = xpoints
-    winningMessageTextElement.innerHTML = "X's Wins"
-    
+  else {
+    winningMessageTextElement.innerText = `${CTurn ? "O's" : "X's"} Wins!`
+    /*cPoints.innerText = `${CTurn ? cpoints += 1 : xpoints += 0}`
+    xPoints.innerText = `${CTurn ? cpoints += 0 : xpoints += 1}`*/
   }
   winningMessageElement.classList.add('show')
 }
+
 
 function isDraw() {
   return [...cellElements].every(cell => {
