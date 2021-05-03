@@ -15,6 +15,11 @@ const board = document.getElementById('board')
 const winningMessageElement = document.getElementById('winningMessage')
 const restartButton = document.getElementById('restartButton')
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
+const cPoints = document.getElementById('cPoints')
+const xPoints = document.getElementById('xPoints')
+const cpoints = 0;
+const xpoints = 0;
+
 let CTurn
 
 startGame()
@@ -50,8 +55,17 @@ function handleClick(e) {
 function endGame(draw) {
   if (draw) {
     winningMessageTextElement.innerText = 'Draw!'
-  } else {
-    winningMessageTextElement.innerText = `${CTurn ? "O's" : "X's"} Wins!`
+  } 
+  if(CTurn == true){
+    cpoints += 1
+    cPoints.innerText = cpoints
+    winningMessageTextElement.innerText = "O's Wins"
+  }
+  if(CTurn == false){
+    xpoints += 1
+    xPoints.innerHTML = xpoints
+    winningMessageTextElement.innerHTML = "X's Wins"
+    
   }
   winningMessageElement.classList.add('show')
 }

@@ -25,9 +25,12 @@
   p{
   font-family: 'Roboto', sans-serif;
   color: #333333;
+  display: flex;
+  justify-content: center;
   }
+
   .board {
-    margin-top: -15vh;
+    margin-top: -20vh;
     width: 100vw;
     height: 100vh;
     display: grid;
