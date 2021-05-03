@@ -1,0 +1,40 @@
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(222, 59%, 75%);
+  color: hsl(0, 0%, 20%);
+
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.link {
+  color: hsl(0, 0%, 20%);
+  text-decoration: none;
+}
+
+/* chessboard: */
+
+.board {
+  width: 50vw;
+  height: 50vw;
+  margin: auto;
+}
+
+.board > div {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.blackSquare {
+  width: 6.25vw;
+  height: 6.25vw;
+  background-color: black;
+}
+
+.whiteSquare {
+  width: 6.25vw;
+  height: 6.25vw;
+  background-color: white;
+}

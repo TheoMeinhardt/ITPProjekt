@@ -20,7 +20,10 @@
 .navbarItem:hover {
   border-bottom: 2px hsl(0, 0%, 20%) solid;
 }
-
+a:visited{
+  text-decoration: none;
+  color: hsl(0, 0%, 20%);
+}
 .navbarIcon {
   height: 3vh;
   margin-left: 0.6vw;
