@@ -49,9 +49,9 @@ stockfish.onmessage = function (event) {
   uciok = event.data ? true : false;
 };
 
-stockfish.postMessage("uci");
-stockfish.postMessage("ucinewgame");
-stockfish.postMessage("isready");
-stockfish.postMessage("position startpos");
-stockfish.postMessage("position ");
-stockfish.postMessage("go ponder depth 15");
+// stockfish.postMessage("uci");
+// stockfish.postMessage("ucinewgame");
+// stockfish.postMessage("isready");
+// stockfish.postMessage("position startpos");
+// stockfish.postMessage("position ");
+// stockfish.postMessage("go ponder depth 15");
