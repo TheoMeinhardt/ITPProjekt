@@ -13,4 +13,9 @@ var pieceColor;
     pieceColor[pieceColor["black"] = 1] = "black";
 })(pieceColor || (pieceColor = {}));
 class piece {
+    constructor(iconpath, type, color) {
+        this.iconPath = iconpath;
+        this.type = type;
+        this.color = color;
+    }
 }

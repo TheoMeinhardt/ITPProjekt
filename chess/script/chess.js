@@ -2,9 +2,14 @@ let stockfish = new Worker("../../stockfish/node_modules/stockfish/src/stockfish
 let uciok = false;
 let board = document.querySelector("#board");
 board.appendChild(buildBoard(board));
+populateBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR");
 function generateFen() {
     let fen;
     return fen;
+}
+function populateBoard(fen) {
+    let fenSplit = fen.split("/");
+    console.log(fenSplit);
 }
 function buildBoard(board) {
     let chars = ["a", "b", "c", "d", "e", "f", "g", "h"];

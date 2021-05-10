@@ -5,11 +5,17 @@ let uciok: boolean = false;
 let board: Element = document.querySelector("#board");
 
 board.appendChild(buildBoard(board));
+populateBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR");
 
 function generateFen(): string {
   let fen;
 
   return fen;
+}
+
+function populateBoard(fen: string): void {
+  let fenSplit: string[] = fen.split("/");
+  console.log(fenSplit);
 }
 
 function buildBoard(board: Element): Element {
