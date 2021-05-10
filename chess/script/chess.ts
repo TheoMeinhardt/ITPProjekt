@@ -18,12 +18,14 @@ function buildBoard(board: Element): Element {
 
   for (let i = 0; i < 8; i++) {
     let rank: Element = document.createElement("div");
-    rank.id = "rank";
+    rank.id = "rank" + (8 - i);
 
     for (let j = 0; j < 8; j++) {
       let square = document.createElement("div");
       square.id = chars[j] + (8 - i);
-      square.innerHTML = square.id;
+      square.addEventListener("click", (): void => {
+        console.log("test");
+      });
 
       if (!lastSquareWasWhite) {
         square.classList.add("whiteSquare");
