@@ -58,12 +58,13 @@ function endGame(draw) {
   if (draw) {
     winningMessageTextElement.innerText = "Draw!";
   } else {
-    winningMessageTextElement.innerText = `${CTurn ? "O's" : "X's"} Wins!`;
+    winningMessageTextElement.innerText = `${CTurn ? "O's" : "X's"} Wins!`
+    cPoints.innerText = `${CTurn ? (cpoints += 1) : (cpoints += 0)}`
+    xPoints.innerText = `${CTurn ? (xpoints += 0) : (xpoints += 1)}`
   }
   winningMessageElement.classList.add("show");
 
-  cPoints.innerText = `${CTurn ? (cpoints += 1) : (xpoints += 0)}`;
-  xPoints.innerText = `${CTurn ? (cpoints += 0) : (xpoints += 1)}`;
+  
 }
 
 function isDraw() {

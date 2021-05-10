@@ -13,39 +13,46 @@
 </head>
 <body>
     
-    <nav>
-        <div class="navbar">
-          <div><img class="navbarIcon" src="../images/home_black_24dp.svg" /></div>
-          <a href="../index.html">
-            <div class="navbarItem">Home</div>
-          </a>
-
-          <div class="navbarGap"></div>
-          <a href="../abChess/...">
-            <div class="navbarItem">Chess</div>
-          </a>
-
-           <a href="../Memory/memory.html">
-            <div class="navbarItem">Memory</div>
-          </a>
-
-          <a href="../Pong/pong.html">
-            <div class="navbarItem">Pong</div>
-          </a>
-
-          <a href="../Snake/snake.html">
-            <div class="navbarItem">Snake</div>
-          </a>
-
-          <a href="../TicTacToe/tictactoe.html">
-            <div class="navbarItem">TicTacToe</div>
-          </a>
-        </div>
-    </nav>
+  <nav>
+    <div class="navbar">
+      <div><img class="navbarIcon" src="../images/home_black_24dp.svg" /></div>
+      <div class="navbarItem">
+        <a class="link" href="../index.html">Home</a>
+      </div>
+      <div class="navbarGap"></div>
+      <div class="navbarItem">
+        <a class="link" href="../chess/chess.html">Chess</a>
+      </div>
+      <div class="navbarItem">
+        <a class="link" href="../Memory/memory.html">Memory</a>
+      </div>
+      <div class="navbarItem">
+        <a class="link" href="../Pong/pong.html">Pong</a>
+      </div>
+      <div class="navbarItem">
+        <a class="link" href="../Snake/snake.html">Snake</a>
+      </div>
+      <div class="navbarItem">
+        <a class="link" href="../TicTacToe/tictactoe.html">TicTacToe</a>
+      </div>
+    </div>
+  </nav>
 
     <h1>TicTacToe</h1>
-    <p id="cPoints">c</p>
-    <p id="xPoints">x</p>
+
+    <div class="container">
+      <div class ="left">
+        <p>O Points:</p>
+        <p>X Points:</p>
+      </div>
+      <div class="right">
+        <p id="cPoints"></p>
+        <p id="xPoints"></p>
+      </div>
+    </div>
+    
+    
+    
     
   <div class="board" id="board">
     <div class="cell" data-cell></div>
