@@ -1,1 +1,53 @@
-html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Pong</title>
+        <script defer src="pongScript/pongScript.js"></script>
+        <link rel="stylesheet" href="pongStyle/pongStyle.css" />
+    </head>
+    <body>
+         <nav>
+      <div class="navbar">
+        <div><img class="navbarIcon" src="../images/home_black_24dp.svg" /></div>
+        <div class="navbarItem">
+          <a class="link" href="../index.html">Home</a>
+        </div>
+        <div class="navbarGap"></div>
+        <div class="navbarItem">
+          <a class="link" href="../chess/chess.html">Chess</a>
+        </div>
+        <div class="navbarItem">
+          <a class="link" href="../Memory/memory.html">Memory</a>
+        </div>
+        <div class="navbarItem">
+          <a class="link" href="../Pong/pong.html">Pong</a>
+        </div>
+        <div class="navbarItem">
+          <a class="link" href="../Snake/snake.html">Snake</a>
+        </div>
+        <div class="navbarItem">
+          <a class="link" href="../TicTacToe/tictactoe.html">TicTacToe</a>
+        </div>
+      </div>
+    </nav>
+        <div id="wrap">
+            <div id="startMenu">
+              <h1>Pong</h1>
+              <button id="startBtn">Start</button>
+            </div>
+            <div id="pauseMenu">
+              <h1>Pause</h1>
+              <button id="continueBtn">Continue</button>
+              <button id="restartBtn">Restart</button>
+            </div>
+            <div id="gameOverMenu">
+              <h1 id="gameMessage"></h1>
+              <button id="againBtn">Try again</button>
+            </div>
+            <div id="gameplay" style="background-color: black;">
+              <canvas id="gameCanvas"></canvas>
+            </div>
+          </div>
+          
+    </body>
+</html>
