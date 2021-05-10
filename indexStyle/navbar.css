@@ -1,8 +1,3 @@
-a:visited {
-  text-decoration: none;
-  color: black;
-}
-
 .navbar {
   display: flex;
   flex-flow: row nowrap;
