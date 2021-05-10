@@ -18,7 +18,7 @@ body {
 
 body {
 	background: #ffffff;
-	font-family: 'Permanent Marker', cursive;
+	font-family: 'Roboto Mono', monospace;
 	font-size: 16px;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 h1 {
-	font-family: 'roboto mono';
+	font-family: 'Roboto Mono', monospace;
 }
 
 
