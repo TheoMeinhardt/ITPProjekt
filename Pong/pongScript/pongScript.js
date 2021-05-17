@@ -274,4 +274,4 @@ function drawEverything() {
   canvasContext.moveTo(canvas.width/2,0);
   canvasContext.lineTo(canvas.width/2,canvas.height);
   canvasContext.stroke();
-} 
+}
