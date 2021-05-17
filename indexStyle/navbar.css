@@ -20,7 +20,7 @@
 .navbarItem:hover {
   border-bottom: 2px hsl(0, 0%, 20%) solid;
 }
-a:visited{
+a:visited {
   text-decoration: none;
   color: hsl(0, 0%, 20%);
 }

@@ -9,6 +9,7 @@ HTML Header:
 CSS rules:
 font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Mono', monospace;
+font-size: 1.2rem;
 
 Roboto Mono -> Überschriften
 Roboto -> Text
