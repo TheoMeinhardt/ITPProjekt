@@ -1,15 +1,17 @@
 let stockfish = new Worker("../../stockfish/node_modules/stockfish/src/stockfish.js");
 let uciok = false;
 let board = document.querySelector("#board");
-board.appendChild(buildBoard(board));
-populateBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR");
+console.log("test");
+buildBoard(board);
+applyFen("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR", board);
 function generateFen() {
     let fen;
     return fen;
 }
-function populateBoard(fen) {
+function applyFen(fen, board) {
     let fenSplit = fen.split("/");
     console.log(fenSplit);
+    fenSplit.forEach((item) => { });
 }
 function buildBoard(board) {
     let chars = ["a", "b", "c", "d", "e", "f", "g", "h"];

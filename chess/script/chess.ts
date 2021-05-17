@@ -2,10 +2,11 @@ let stockfish = new Worker(
   "../../stockfish/node_modules/stockfish/src/stockfish.js"
 );
 let uciok: boolean = false;
-let board: Element = document.querySelector("#board");
+let board: HTMLDivElement = document.querySelector("#board");
 
-board.appendChild(buildBoard(board));
-populateBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR");
+console.log("test");
+buildBoard(board);
+applyFen("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR", board);
 
 function generateFen(): string {
   let fen;
@@ -13,9 +14,10 @@ function generateFen(): string {
   return fen;
 }
 
-function populateBoard(fen: string): void {
+function applyFen(fen: string, board: HTMLDivElement): void {
   let fenSplit: string[] = fen.split("/");
   console.log(fenSplit);
+  fenSplit.forEach((item) => {});
 }
 
 function buildBoard(board: Element): Element {
