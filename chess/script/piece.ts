@@ -85,15 +85,9 @@ class piece {
   color: pieceColor;
   position: coordinate;
 
-  constructor(
-    iconpath: string,
-    type: pieceType,
-    color: pieceColor,
-    coordinate: coordinate
-  ) {
+  constructor(iconpath: string, type: pieceType, color: pieceColor) {
     this.iconPath = iconpath;
     this.type = type;
     this.color = color;
-    this.position = coordinate;
   }
 }

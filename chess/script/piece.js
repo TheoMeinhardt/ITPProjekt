@@ -80,10 +80,9 @@ var coordinate;
     coordinate[coordinate["h8"] = 63] = "h8";
 })(coordinate || (coordinate = {}));
 class piece {
-    constructor(iconpath, type, color, coordinate) {
+    constructor(iconpath, type, color) {
         this.iconPath = iconpath;
         this.type = type;
         this.color = color;
-        this.position = coordinate;
     }
 }
