@@ -1,15 +1,43 @@
 let stockfish = new Worker("../../stockfish/node_modules/stockfish/src/stockfish.js");
 let uciok = false;
 let board = document.querySelector("#board");
-board.appendChild(buildBoard(board));
-populateBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR");
+let allPieces = [];
+buildBoard(board);
+buildPieces();
+applyFenToBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR", board);
 function generateFen() {
     let fen;
     return fen;
 }
-function populateBoard(fen) {
+function applyFenToBoard(fen, board) {
     let fenSplit = fen.split("/");
     console.log(fenSplit);
+    fenSplit.forEach((item) => {
+        let fenChars = item.split("");
+        fenChars.forEach((char) => {
+            let icon;
+            switch (char) {
+                case "p": {
+                    break;
+                }
+            }
+        });
+    });
+}
+function buildPieces() {
+    let whiteKingIconPath = "../../images/chessPieces/defaultTheme/WhiteKing.svg", blackKingIconPath = "../../images/chessPieces/defaultTheme/BlackKing.svg", whiteQueenIconPath = "../../images/chessPieces/defaultTheme/WhiteQueen.svg", blackQueenIconPath = "../../images/chessPieces/defaultTheme/BlackQueen.svg", whiteRookIconPath = "../../images/chessPieces/defaultTheme/WhiteRook.svg", blackRookIconPath = "../../images/chessPieces/defaultTheme/BlackRook.svg", whiteKnightIconPath = "../../images/chessPieces/defaultTheme/WhiteKnight.svg", blackKnightIconPath = "../../images/chessPieces/defaultTheme/BlackKnight.svg", whiteBishopIconPath = "../../images/chessPieces/defaultTheme/WhiteBishop.svg", blackBishopIconPath = "../../images/chessPieces/defaultTheme/BlackBishop.svg", whitePawnIconPath = "../../images/chessPieces/defaultTheme/WhitePawn.svg", blackPawnIconPath = "../../images/chessPieces/defaultTheme/BlackPawn.svg";
+    allPieces.push(new piece(whiteKingIconPath, pieceType.king, pieceColor.white));
+    allPieces.push(new piece(blackKingIconPath, pieceType.king, pieceColor.black));
+    allPieces.push(new piece(whiteQueenIconPath, pieceType.queen, pieceColor.white));
+    allPieces.push(new piece(blackQueenIconPath, pieceType.queen, pieceColor.black));
+    allPieces.push(new piece(whiteRookIconPath, pieceType.rook, pieceColor.white));
+    allPieces.push(new piece(blackRookIconPath, pieceType.rook, pieceColor.black));
+    allPieces.push(new piece(whiteKnightIconPath, pieceType.knight, pieceColor.white));
+    allPieces.push(new piece(blackKnightIconPath, pieceType.knight, pieceColor.black));
+    allPieces.push(new piece(whiteBishopIconPath, pieceType.bishop, pieceColor.white));
+    allPieces.push(new piece(blackBishopIconPath, pieceType.bishop, pieceColor.black));
+    allPieces.push(new piece(whitePawnIconPath, pieceType.pawn, pieceColor.white));
+    allPieces.push(new piece(blackPawnIconPath, pieceType.pawn, pieceColor.black));
 }
 function buildBoard(board) {
     let chars = ["a", "b", "c", "d", "e", "f", "g", "h"];
