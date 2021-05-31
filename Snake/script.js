@@ -1,17 +1,4 @@
-/*
 
-
-
-If you want to learn how this game was made, check out this video, that walks through the main ideas: 
-
-YouTube: https://youtu.be/TAmYp4jKWoM
-Skillshare: https://skl.sh/3nudJ1o
-
-Follow me on twitter for more: https://twitter.com/HunorBorbely
-
-
-
-*/
 
 window.addEventListener("DOMContentLoaded", function (event) {
     window.focus(); // Capture keys right away (by default focus is on editor)
@@ -36,8 +23,6 @@ window.addEventListener("DOMContentLoaded", function (event) {
     const height = 15; // Grid height
   
     const speed = 200; // Milliseconds it takes for the snake to take a step in the grid
-    let fadeSpeed = 5000; // milliseconds it takes the grid to disappear (initially)
-    let fadeExponential = 1.024; // after each score it will gradually take more time for the grid to fade
     const contrastIncrease = 0.5; // contrast you gain after each score
     const color = "black"; // Primary color
   
@@ -154,8 +139,6 @@ window.addEventListener("DOMContentLoaded", function (event) {
       // Set Easy mode
       if (event.key == "E" || event.key == "e") {
         hardMode = false;
-        fadeSpeed = 5000;
-        fadeExponential = 1.024;
         noteElement.innerHTML = `Easy mode. Press space to start!`;
         noteElement.style.opacity = 1;
         resetGame();
@@ -243,11 +226,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
             contrast = Math.min(1, contrast + contrastIncrease);
   
             // Debugging
-            console.log(`Contrast increased by ${contrastIncrease * 100}%`);
-            console.log(
-              "New fade speed (from 100% to 0% in milliseconds)",
-              Math.pow(fadeExponential, score) * fadeSpeed
-            );
+          
           }
   
           stepsTaken++;
@@ -255,15 +234,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
           transition(percentageOfStep);
         }
   
-        if (lastTimestamp) {
-          // Decrease the contrast based on the time passed an the current score
-          // With a higher score the contrast decreases slower
-          const contrastDecrease =
-            timeElapsedSinceLastCall /
-            (Math.pow(fadeExponential, score) * fadeSpeed);
-          // Don't let the contrast drop below zero
-          contrast = Math.max(0, contrast - contrastDecrease);
-        }
+        
   
         contrastElement.innerText = `${Math.floor(contrast * 100)}%`;
         containerElement.style.opacity = contrast;
