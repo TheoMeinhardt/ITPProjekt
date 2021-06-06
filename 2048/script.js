@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () =>  {
   const width = 4
   let score = 0
 
+
+
+
   //create the playing board
   function createBoard() {
     for (let i=0; i < width*width; i++) {
@@ -16,8 +19,10 @@ document.addEventListener('DOMContentLoaded', () =>  {
     }
     generate()
     generate()
+    
   }
   createBoard()
+
 
   //generate a new number
   function generate() {
@@ -185,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
   function checkForWin() {
     for (let i=0; i < squares.length; i++) {
       if (squares[i].innerHTML == 2048) {
-        resultDisplay.innerHTML = 'You WIN'
+        resultDisplay.innerHTML = 'Du hast gewonnen!'
         document.removeEventListener('keyup', control)
         setTimeout(() => clear(), 3000)
       }
@@ -201,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
       }
     }
     if (zeros === 0) {
-      resultDisplay.innerHTML = 'You LOSE'
+      resultDisplay.innerHTML = 'Du hast verloren!'
       document.removeEventListener('keyup', control)
       setTimeout(() => clear(), 3000)
     }
