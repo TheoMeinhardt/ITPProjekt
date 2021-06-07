@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../indexStyle/navbar.css">
-  <link rel="stylesheet" href="../indexStyle/style.css" />
-  <script src="script.js" defer></script>
-  <title>TicTacToe</title>
-</head>
-<body>
-    
-  <nav>
-    <div class="navbar">
-      <div><img class="navbarIcon" src="../images/home_black_24dp.svg" /></div>
-      <div class="navbarItem">
-        <a class="link" href="../index.html">Home</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../indexStyle/navbar.css" />
+    <link rel="stylesheet" href="../indexStyle/style.css" />
+    <script src="script.js" defer></script>
+    <title>TicTacToe</title>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div>
+          <img class="navbarIcon" src="../images/home_black_24dp.svg" />
+        </div>
+        <div class="navbarItem">
+          <a class="link" href="../index.html">Home</a>
+        </div>
+        <div class="navbarGap"></div>
+        <div class="navbarItem">
+          <a class="link" href="../Memory/memory.html">Memory</a>
+        </div>
+        <div class="navbarItem">
+          <a class="link" href="../Pong/pong.html">Pong</a>
+        </div>
+        <div class="navbarItem">
+          <a class="link" href="../2048/2048.html">2048</a>
+        </div>
+        <div class="navbarItem">
+          <a class="link" href="../TicTacToe/tictactoe.html">TicTacToe</a>
+        </div>
       </div>
-      <div class="navbarGap"></div>
-      <div class="navbarItem">
-        <a class="link" href="../chess/chess.html">Chess</a>
-      </div>
-      <div class="navbarItem">
-        <a class="link" href="../Memory/memory.html">Memory</a>
-      </div>
-      <div class="navbarItem">
-        <a class="link" href="../Pong/pong.html">Pong</a>
-      </div>
-      <div class="navbarItem">
-        <a class="link" href="../2048/2048.html">2048</a>
-      </div>
-      <div class="navbarItem">
-        <a class="link" href="../TicTacToe/tictactoe.html">TicTacToe</a>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
     <h1>TicTacToe</h1>
 
     <div class="container">
-      <div class ="left">
+      <div class="left">
         <p>O Points:</p>
         <p>X Points:</p>
       </div>
@@ -51,26 +52,22 @@
         <p id="xPoints"></p>
       </div>
     </div>
-    
-    
-    
-    
-  <div class="board" id="board">
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-  </div>
 
-  <div class="winning-message" id="winningMessage">
-    <div data-winning-message-text></div>
-    <button id="restartButton">Restart</button>
-  </div>
+    <div class="board" id="board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
 
-</body>
+    <div class="winning-message" id="winningMessage">
+      <div data-winning-message-text></div>
+      <button id="restartButton">Restart</button>
+    </div>
+  </body>
 </html>

@@ -1,31 +1,30 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap"
-          rel="stylesheet"
-        />
-        <script defer src="pongScript/pongScript.js"></script>
-        <link rel="stylesheet" href="pongStyle/pongStyle.css" />
-        <link rel="stylesheet" href="../indexStyle/navbar.css">
-        <link rel="stylesheet" href="../indexStyle/style.css">
-        <title>Pong</title>
-    </head>
-    <body>
-         <nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="pongScript/pongScript.js"></script>
+    <link rel="stylesheet" href="pongStyle/pongStyle.css" />
+    <link rel="stylesheet" href="../indexStyle/navbar.css" />
+    <link rel="stylesheet" href="../indexStyle/style.css" />
+    <title>Pong</title>
+  </head>
+  <body>
+    <nav>
       <div class="navbar">
-        <div><img class="navbarIcon" src="../images/home_black_24dp.svg" /></div>
+        <div>
+          <img class="navbarIcon" src="../images/home_black_24dp.svg" />
+        </div>
         <div class="navbarItem">
           <a class="link" href="../index.html">Home</a>
         </div>
         <div class="navbarGap"></div>
-        <div class="navbarItem">
-          <a class="link" href="../chess/chess.html">Chess</a>
-        </div>
         <div class="navbarItem">
           <a class="link" href="../Memory/memory.html">Memory</a>
         </div>
@@ -40,24 +39,23 @@
         </div>
       </div>
     </nav>
-        <div id="wrap">
-            <div id="startMenu">
-              <h1>Pong</h1>
-              <button id="startBtn">Start</button>
-            </div>
-            <div id="pauseMenu">
-              <h1>Pause</h1>
-              <button id="continueBtn">Continue</button>
-              <button id="restartBtn">Restart</button>
-            </div>
-            <div id="gameOverMenu">
-              <h1 id="gameMessage"></h1>
-              <button id="againBtn">Try again</button>
-            </div>
-            <div id="gameplay" style="background-color: black;">
-              <canvas id="gameCanvas"></canvas>
-            </div>
-          </div>
-          
-    </body>
+    <div id="wrap">
+      <div id="startMenu">
+        <h1>Pong</h1>
+        <button id="startBtn">Start</button>
+      </div>
+      <div id="pauseMenu">
+        <h1>Pause</h1>
+        <button id="continueBtn">Continue</button>
+        <button id="restartBtn">Restart</button>
+      </div>
+      <div id="gameOverMenu">
+        <h1 id="gameMessage"></h1>
+        <button id="againBtn">Try again</button>
+      </div>
+      <div id="gameplay" style="background-color: black">
+        <canvas id="gameCanvas"></canvas>
+      </div>
+    </div>
+  </body>
 </html>
