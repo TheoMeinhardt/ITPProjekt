@@ -30,6 +30,7 @@ a:visited { text-decoration: none; color:black; }
 *************
 
 https://paletton.com/#uid=23L0u0klHAMbDQZhdIRq5vyulqC
+https://coolors.co/9ab0e5-485696-f9c784-fc7a1e-f24c00-06a77d-16f4d0-fc60a8-0a8754
 
 #333333 -> Font color
 
