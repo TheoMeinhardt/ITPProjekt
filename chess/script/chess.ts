@@ -7,7 +7,7 @@ let allPieces: piece[] = [];
 
 buildBoard(board);
 buildPieces();
-applyFenToBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR", board);
+applyFenToBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR/", board);
 
 function generateFen(): string {
   let fen;
@@ -17,18 +17,22 @@ function generateFen(): string {
 
 function applyFenToBoard(fen: string, board: HTMLDivElement): void {
   let fenSplit: string[] = fen.split("/");
-  console.log(fenSplit);
-  fenSplit.forEach((item) => {
+
+  for (let i = 1; i <= fenSplit.length; i++) {
+    let item = fenSplit[i];
     let fenChars: string[] = item.split("");
-    fenChars.forEach((char) => {
-      let icon: HTMLImageElement;
-      switch (char) {
-        case "p": {
-          break;
-        }
-      }
-    });
-  });
+    let rank = document.querySelector(`#rank${i}`);
+    console.log(rank);
+
+    // fenChars.forEach((char) => {
+    //   let icon: HTMLImageElement;
+    //   switch (char) {
+    //     case "p": {
+    //       break;
+    //     }
+    //   }
+    // });
+  }
 }
 
 function buildPieces(): void {

@@ -4,25 +4,27 @@ let board = document.querySelector("#board");
 let allPieces = [];
 buildBoard(board);
 buildPieces();
-applyFenToBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR", board);
+applyFenToBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR/", board);
 function generateFen() {
     let fen;
     return fen;
 }
 function applyFenToBoard(fen, board) {
     let fenSplit = fen.split("/");
-    console.log(fenSplit);
-    fenSplit.forEach((item) => {
+    for (let i = 1; i <= fenSplit.length; i++) {
+        let item = fenSplit[i];
         let fenChars = item.split("");
-        fenChars.forEach((char) => {
-            let icon;
-            switch (char) {
-                case "p": {
-                    break;
-                }
-            }
-        });
-    });
+        let rank = document.querySelector(`#rank${i}`);
+        console.log(rank);
+        // fenChars.forEach((char) => {
+        //   let icon: HTMLImageElement;
+        //   switch (char) {
+        //     case "p": {
+        //       break;
+        //     }
+        //   }
+        // });
+    }
 }
 function buildPieces() {
     let whiteKingIconPath = "../../images/chessPieces/defaultTheme/WhiteKing.svg", blackKingIconPath = "../../images/chessPieces/defaultTheme/BlackKing.svg", whiteQueenIconPath = "../../images/chessPieces/defaultTheme/WhiteQueen.svg", blackQueenIconPath = "../../images/chessPieces/defaultTheme/BlackQueen.svg", whiteRookIconPath = "../../images/chessPieces/defaultTheme/WhiteRook.svg", blackRookIconPath = "../../images/chessPieces/defaultTheme/BlackRook.svg", whiteKnightIconPath = "../../images/chessPieces/defaultTheme/WhiteKnight.svg", blackKnightIconPath = "../../images/chessPieces/defaultTheme/BlackKnight.svg", whiteBishopIconPath = "../../images/chessPieces/defaultTheme/WhiteBishop.svg", blackBishopIconPath = "../../images/chessPieces/defaultTheme/BlackBishop.svg", whitePawnIconPath = "../../images/chessPieces/defaultTheme/WhitePawn.svg", blackPawnIconPath = "../../images/chessPieces/defaultTheme/BlackPawn.svg";
